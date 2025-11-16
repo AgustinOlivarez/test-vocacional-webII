@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 import os
+import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -77,14 +78,11 @@ WSGI_APPLICATION = 'mi_sitio.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'proyectoDjango',
-        'USER':'postgres',
-        'PASSWORD':'Ave290601',
-        'HOST':'localhost',
-        'PORT':'5432',
-    }
+    'default': dj_database_url.config(
+        default='postgresql://proyectodjango_1bl8_user:1AaHG58RLs1FMAPlEMWCeg1OwaLdUP6x@dpg-d4d5k5idbo4c73dks6lg-a.oregon-postgres.render.com/proyectodjango_1bl8',
+        conn_max_age=600,
+        ssl_require=True
+    )
 }
 
 
