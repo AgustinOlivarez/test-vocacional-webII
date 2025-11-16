@@ -115,7 +115,7 @@ def pagina_inicio(request):
                 message=informe,
                 from_email=settings.DEFAULT_FROM_EMAIL,
                 recipient_list=[correo],
-                fail_silently=False,
+                fail_silently=True,
             )
             return JsonResponse({
                 'nombre': nombre,

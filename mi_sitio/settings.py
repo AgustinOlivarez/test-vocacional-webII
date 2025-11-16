@@ -134,11 +134,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'c2280296.ferozo.com'
-EMAIL_PORT = 587
+EMAIL_PORT = 465
 EMAIL_HOST_USER = 'agustin.olivarez@lalupitacontenidos.site'
 EMAIL_HOST_PASSWORD = 'Agustin2025/'
-EMAIL_USE_SSL = False
-EMAIL_USE_TLS = True
+EMAIL_USE_SSL = True
+EMAIL_USE_TLS = False
 
 LOGIN_URL = '/login/'
 LOGOUT_REDIRECT_URL = '/login/'
