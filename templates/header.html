@@ -1,0 +1,23 @@
+{% load static %}
+<header class="site-header">
+  <div class="header-inner">
+    <!-- LOGO + nombre -->
+    <a class="brand" href="/">
+      <img src="{% static 'images/Logo.png' %}" alt="Logo" class="logo">
+      <span class="site-title">VOCARI</span>
+    </a>
+
+    <!-- Navegación -->
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/sobre-nosotros/">Sobre Nosotros</a></li>
+        <li><a href="/contacto/">Hablemos</a></li>
+          <li><a href="/accounts/login">Iniciar Sesión</a></li>
+      </ul>
+    </nav>
+
+    <!-- Icono (ej: chat) -->
+    <i class="header-icon bi bi-person"></i>
+  </div>
+</header>

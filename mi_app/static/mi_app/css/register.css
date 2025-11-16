@@ -1,0 +1,103 @@
+/* ===== REGISTER PAGE ===== */
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 75vh;
+  background-color: var(--blanco);
+  font-family: var(--font-textos);
+  color: var(--azul-oscuro);
+  padding: 2rem;
+}
+
+/* ===== TÍTULO ===== */
+.register-container h1 {
+  font-family: var(--font-titulos);
+  color: var(--verde-lima);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* ===== FORMULARIO ===== */
+.register-container form {
+  background-color: var(--blanco);
+  border: 2px solid var(--verde-lima);
+  border-radius: 10px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.register-container form p {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.register-container label {
+  font-weight: 600;
+  color: var(--azul-oscuro);
+  margin-bottom: 0.3rem;
+}
+
+.register-container input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.register-container input:focus {
+  border-color: var(--verde-lima);
+  outline: none;
+}
+
+/* ===== BOTÓN PRINCIPAL ===== */
+.register-container button[type="submit"] {
+  background-color: var(--verde-lima);
+  color: var(--blanco);
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.register-container button[type="submit"]:hover {
+  background-color: var(--azul-oscuro);
+}
+
+/* ===== ENLACE LOGIN ===== */
+.register-container p {
+  margin-top: 1.2rem;
+  text-align: center;
+}
+
+.register-container a {
+  color: var(--verde-lima);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-container a:hover {
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+  .register-container form {
+    padding: 1.5rem;
+  }
+
+  .register-container h1 {
+    font-size: 1.6rem;
+  }
+}

@@ -1,0 +1,192 @@
+/* ===== VARIABLES ===== */
+:root {
+  /* Colores */
+  --verde-lima: #526522;
+  --verde: #c6f13b;
+  --azul-oscuro: #10171d;
+  --blanco: #FFFFFF;
+  --negro: #000000;
+
+  /* Tipografías */
+  --font-logo: 'Oswald', sans-serif;
+  --font-titulos: 'Pathway Gothic One', sans-serif;
+  --font-textos: 'Poppins', sans-serif;
+}
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-textos);
+  background-color: var(--blanco);
+  color: var(--negro);
+  line-height: 1.5;
+}
+
+/* ===== HEADER ===== */
+.site-header {
+  background: var(--azul-oscuro);
+  color: var(--blanco);
+  max-height: 15vh;      /* límite superior */
+  height: 15vh;          /* altura fija: ocupa el 15% de la pantalla */
+  display: flex;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+}
+
+/* Logo + nombre */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.logo {
+  max-height: 100%;
+  height: auto;
+  width: auto;
+  object-fit: contain; /* No cambia el tamaño del logo */
+}
+
+.site-title {
+  font-family: var(--font-logo);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--blanco);
+}
+
+/* Nav */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+.main-nav a {
+  text-decoration: none;
+  color: var(--blanco);
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.main-nav a:hover {
+  color: var(--verde-lima);
+}
+
+/* Icono */
+.header-icon {
+  font-size: 1.5rem;
+  color: var(--blanco);
+  transition: color 0.2s;
+}
+.header-icon:hover {
+  color: var(--verde-lima);
+}
+
+
+/* ===== FOOTER ===== */
+.site-footer {
+  background: var(--azul-oscuro);
+  color: var(--blanco);
+  text-align: center;
+  padding: 16px 0;
+  font-family: var(--font-textos);
+  font-size: 14px;
+}
+
+.site-footer p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+
+.site-footer .dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--blanco);
+  border-radius: 50%;
+}
+
+/* ===== CLASES VARIAS ===== */
+.cursos {
+  margin-bottom: 10%;
+}
+
+@media (max-width: 768px) {
+    .logo{
+        width: 50px;
+        height: 50px;
+    }
+      .site-header {
+    height: auto;      /* se ajusta al contenido apilado */
+    max-height: none;
+    padding: 10px 0;   /* opcional: un poco de espacio arriba y abajo */
+  }
+      .header-inner {
+    flex-direction: column;       /* apila logo y nav */
+    align-items: center;
+    gap: 12px;
+  }
+
+  .main-nav ul {
+    flex-direction: column;       /* nav vertical */
+    gap: 12px;
+    align-items: center;
+  }
+    .site-footer p {
+    flex-direction: column; /* los elementos se apilan */
+    gap: 4%;                /* menos espacio entre ellos */
+  }
+}
+
+@media (max-width: 480px) {
+      .header-inner {
+    gap: 8px;                     /* menos separación vertical */
+  }
+
+  .main-nav ul {
+    gap: 8px;
+  }
+
+  .header-icon {
+    font-size: 1.2rem;            /* icono un poco más pequeño */
+  }
+
+  .site-title {
+    font-size: 1.2rem;            /* título más pequeño si hace falta */
+  }
+  .hero {
+    height: 40vh; /* más compacto en móviles */
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .section-left h2 {
+    font-size: 2rem;
+  }
+  .site-footer p {
+    flex-direction: column;
+    gap: 2%; /* todavía menos separación en pantallas muy pequeñas */
+  }
+
+  .site-footer .dot {
+    width: 6px;  /* puntos un poco más pequeños */
+    height: 6px;
+  }
+
+}

@@ -1,0 +1,155 @@
+/* ===== HERO ===== */
+.hero {
+  background: url("/static/images/coworking.jpg") no-repeat center center;
+  background-size: cover;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--blanco);
+  position: relative;
+}
+
+/* Overlay azul oscuro */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgb(1, 1, 35);
+  opacity: 0.6;
+  z-index: 1;
+}
+
+/* Texto sobre overlay */
+.hero-text {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 0 10px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 6vw, 4rem); /* mínimo 2rem, máximo 6rem, escala con el ancho */
+  line-height: 1.2;
+}
+
+.highlight {
+  background: var(--verde);
+  color: var(--blanco);
+  padding: 0 5px;
+  border-radius: 4px;
+}
+
+/* ===== SECCIONES ===== */
+.section {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: stretch;
+  margin: 60px 10% 0 0;
+  min-height: 200px;
+}
+
+.section-left {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.section-left h2 {
+  text-align: end;
+  background: var(--verde);
+  font-size: 4rem;
+  padding-right: 5%;
+  font-weight: 300;
+  color: var(--blanco);
+  width: 100%;
+}
+
+.section-right {
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.section-right p {
+  margin: 10px 0;
+  font-size: 1.05rem;
+}
+
+.section-right label {
+  display: block;
+  margin: 10px 0;
+}
+
+/* ===== FORMULARIO ===== */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form label{
+    font-weight: bold;
+}
+
+.form input,
+.form select {
+  padding: 12px;
+    width: 100%;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 2px solid var(--negro);
+  outline: none;
+  background: transparent;
+}
+
+.btn {
+  background: var(--negro);
+  color: var(--blanco);
+  padding: 14px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 20px;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  .hero h1 {
+    font-size: 4rem;
+  }
+  .section {
+    grid-template-columns: 50% 50%;
+  }
+  .section-right {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+    .hero{
+        height: 40vh;
+    }
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .section {
+    grid-template-columns: 1fr;
+    margin: 40px 5% 0 5%;
+  }
+  .section-left h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    padding-right: 0;
+  }
+  .section-right {
+    padding: 0 10px;
+  }
+}

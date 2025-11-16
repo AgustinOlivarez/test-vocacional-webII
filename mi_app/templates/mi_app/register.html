@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'mi_app/css/register.css' %}">
+{% endblock %}
+{% block content %}
+<div class="register-container">
+  <h1>Crear una cuenta</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Registrarme</button>
+  </form>
+
+  <p>¿Ya tenés cuenta? <a href="{% url 'login' %}">Iniciar sesión</a></p>
+</div>
+{% endblock %}

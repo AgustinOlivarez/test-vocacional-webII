@@ -1,0 +1,97 @@
+/* ===== LOGIN ===== */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 75vh; /* ocupa el espacio entre header y footer */
+  background-color: var(--blanco);
+  padding: 40px 20px;
+}
+
+.login-box {
+  background: var(--azul-oscuro);
+  color: var(--blanco);
+  padding: 40px 50px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.login-box h2 {
+  font-family: var(--font-titulos);
+  font-size: 1.8rem;
+  color: var(--verde);
+  margin-bottom: 20px;
+}
+
+/* Campos del formulario */
+.login-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-box label {
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+}
+
+.login-box input {
+  padding: 10px 12px;
+  border: 2px solid var(--verde-lima);
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.login-box input:focus {
+  border-color: var(--verde);
+}
+
+/* Botón principal */
+.login-box button[type="submit"] {
+  background: var(--verde-lima);
+  color: var(--azul-oscuro);
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-box button[type="submit"]:hover {
+  background: var(--verde);
+}
+
+/* Separador */
+.login-box hr {
+  margin: 25px 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Enlace de registro */
+.register-link {
+  color: var(--verde);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.register-link:hover {
+  color: var(--verde-lima);
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+  .login-box {
+    padding: 30px 20px;
+  }
+}

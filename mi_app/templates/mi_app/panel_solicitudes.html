@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'mi_app/css/panel_solicitudes.css' %}">
+{% endblock %}
+{% block content %}
+<div class="panel-container">
+  <h1>Solicitudes de Test Vocacional</h1>
+
+  <div class="panel-header">
+    <span>Bienvenido, {{ user.username }}</span>
+    <form action="{% url 'logout' %}" method="post">
+      {% csrf_token %}
+      <button type="submit">Cerrar sesión</button>
+    </form>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Correo</th>
+        <th>Pregunta 1</th>
+        <th>Pregunta 2</th>
+        <th>Pregunta 3</th>
+        <th>Pregunta 4</th>
+        <th>Pregunta 5</th>
+        <th>Área</th>
+        <th>Descripción</th>
+        <th>Carreras</th>
+        <th>Fecha</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for solicitud in solicitudes %}
+      <tr>
+        <td>{{ solicitud.nombre }}</td>
+        <td>{{ solicitud.edad }}</td>
+        <td>{{ solicitud.correo }}</td>
+        <td>{{ solicitud.pregunta1 }}</td>
+        <td>{{ solicitud.pregunta2 }}</td>
+        <td>{{ solicitud.pregunta3 }}</td>
+        <td>{{ solicitud.pregunta4 }}</td>
+        <td>{{ solicitud.pregunta5 }}</td>
+        <td>{{ solicitud.area_predominante }}</td>
+        <td>{{ solicitud.descripcion }}</td>
+        <td>{{ solicitud.carreras_recomendadas }}</td>
+        <td>{{ solicitud.fecha_creacion }}</td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="12">No hay solicitudes registradas.</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
