@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-xn8j#g--i=3kgqq$7@3yz@@co-$3je-_w9%q60ex%bz!sbhz_@
 DEBUG = True
 
 ALLOWED_HOSTS = ['test-vocacional-webii.onrender.com',
-                 '127.0.0.1']
+                 '127.0.0.1',
+                 'localhost']
 
 
 # Application definition
