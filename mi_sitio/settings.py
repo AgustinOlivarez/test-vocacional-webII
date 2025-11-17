@@ -147,4 +147,7 @@ LOGIN_URL = '/login/'
 LOGOUT_REDIRECT_URL = '/login/'
 LOGIN_REDIRECT_URL = '/panel/'
 
-API_TRADUCTOR_URL = os.getenv("API_TRADUCTOR_URL", "http://127.0.0.1:8000/api/traducir/")
+API_TRADUCTOR_URL = os.getenv(
+    "API_TRADUCTOR_URL",
+    "http://127.0.0.1:8000/api/traducir/"
+)
