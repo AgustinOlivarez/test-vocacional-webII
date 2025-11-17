@@ -1,9 +1,10 @@
 import requests
+from django.conf import settings
 
 def traducir_texto(texto, de='es', a='en'):
     try:
         response = requests.post(
-            "http://127.0.0.1:8000/api/traducir/",
+            settings.API_TRADUCTOR_URL,
             json={"texto": texto, "de": de, "a": a}
         )
         if response.status_code == 200:

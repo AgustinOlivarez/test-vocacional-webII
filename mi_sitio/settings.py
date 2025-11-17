@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-xn8j#g--i=3kgqq$7@3yz@@co-$3je-_w9%q60ex%bz!sbhz_@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['test-vocacional-webii.onrender.com']
+ALLOWED_HOSTS = ['test-vocacional-webii.onrender.com',
+                 '127.0.0.1']
 
 
 # Application definition
@@ -144,3 +145,5 @@ EMAIL_USE_TLS = False
 LOGIN_URL = '/login/'
 LOGOUT_REDIRECT_URL = '/login/'
 LOGIN_REDIRECT_URL = '/panel/'
+
+API_TRADUCTOR_URL = os.getenv("API_TRADUCTOR_URL", "http://127.0.0.1:8000/api/traducir/")
