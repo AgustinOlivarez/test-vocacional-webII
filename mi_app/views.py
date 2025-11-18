@@ -22,20 +22,6 @@ class SolicitudesView(APIView):
         serializer = SolicitudSerializer(solicitudes, many=True)
         return Response(serializer.data)
 
-class TraducirView(APIView):
-    def post(self, request):
-        texto = request.data.get("texto")
-        de_lang = request.data.get("de", "es")
-        a_lang = request.data.get("a", "en")
-
-        url = "https://api.mymemory.translated.net/get"
-        params = {'q': texto, 'langpair': f'{de_lang}|{a_lang}'}
-        response = requests.get(url, params=params)
-        data = response.json()
-
-        traduccion = data.get('responseData', {}).get('translatedText', texto)
-        return Response({"traduccion": traduccion})
-
 def pagina_inicio(request):
     if request.method == 'POST':
         form = TestVocacionalForm(request.POST)
@@ -115,7 +101,7 @@ def pagina_inicio(request):
                 message=informe,
                 from_email=settings.DEFAULT_FROM_EMAIL,
                 recipient_list=[correo],
-                fail_silently=True,
+                fail_silently=False,
             )
             return JsonResponse({
                 'nombre': nombre,
