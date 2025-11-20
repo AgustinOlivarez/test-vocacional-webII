@@ -20,7 +20,7 @@
     <form method="POST" action="{% url 'pagina_inicio' %}" class="form" id="test-form">
       {% csrf_token %}
       {{ form.as_p }}
-      <button type="submit" class="btn mb-2">ENVIAR</button>
+      <button type="submit" class="btn mb-2" id="btn-submit">ENVIAR</button>
    </form>
 
   </div>
