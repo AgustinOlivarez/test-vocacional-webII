@@ -3,7 +3,7 @@
 Este proyecto es una aplicación web desarrollada en **Django** que permite a los usuarios completar un **test vocacional interactivo**.  
 El sistema procesa las respuestas, determina un **perfil profesional**, y recomienda **carreras y cursos** de manera dinámica utilizando AJAX (Fetch API).
 
-## 🚀 Características principales
+## Características principales
 
 - Formulario validado en frontend con JavaScript y SweetAlert2.  
 - Envío del formulario mediante Fetch API sin recargar la página.   
